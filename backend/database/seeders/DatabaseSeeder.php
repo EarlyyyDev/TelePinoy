@@ -15,13 +15,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::query()->firstOrCreate(
-            ['email' => 'test@example.com'],
-            [
-                'name' => 'Test User',
-                'password' => fake()->password(),
-            ]
-        );
+        if (! app()->environment('production')) {
+            User::query()->firstOrCreate(
+                ['email' => 'test@example.com'],
+                [
+                    'name' => 'Test User',
+                    'password' => fake()->password(),
+                ]
+            );
+        }
 
         $this->call(ChannelSeeder::class);
         $this->call(AdminUserSeeder::class);
