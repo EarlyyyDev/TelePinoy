@@ -1,0 +1,35 @@
+{
+  "name": "telepinoy",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.2",
+    "@capacitor/cli": "^8.6.2",
+    "@capacitor/core": "^8.6.2",
+    "@quasar/extras": "^2.1.0",
+    "@quasar/vite-plugin": "^2.0.2",
+    "axios": "^1.21.1",
+    "hls.js": "^1.7.4",
+    "pinia": "^4.1.0",
+    "quasar": "^2.35.4",
+    "vue": "^3.5.44",
+    "vue-router": "^5.5.1"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^3.10.4",
+    "@quasar/cli": "^5.0.10",
+    "@types/node": "^24.19.2",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/tsconfig": "^0.9.1",
+    "sass": "^1.108.2",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.6",
+    "vue-tsc": "^3.3.14"
+  }
+}
