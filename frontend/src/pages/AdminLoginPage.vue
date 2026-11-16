@@ -47,8 +47,8 @@ async function submitLogin() {
       </q-banner>
 
       <q-form class="q-gutter-md" @submit.prevent="submitLogin">
-        <q-input v-model="email" type="email" autocomplete="username" outlined label="Email" required />
-        <q-input v-model="password" type="password" autocomplete="current-password" outlined label="Password" required />
+        <q-input v-model="email" type="email" autocomplete="username" outlined dark label="Email" required />
+        <q-input v-model="password" type="password" autocomplete="current-password" outlined dark label="Password" required />
         <q-btn type="submit" color="primary" class="full-width" label="Sign in" :loading="loading" />
       </q-form>
     </q-card>

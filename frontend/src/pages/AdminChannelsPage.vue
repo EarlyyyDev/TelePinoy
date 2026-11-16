@@ -290,7 +290,6 @@ async function publishChannel(channel: Channel, isActive: boolean) {
     const saved = await setChannelPlayable(channel.slug, isActive)
     channels.value = channels.value.map((item) => item.id === saved.id ? saved : item)
     notice.value = isActive ? `${channel.name} is now published in Live.` : `${channel.name} has been unpublished.`
-    if (isActive) await changeTab('live')
   } catch (error) {
     requestError.value = axios.isAxiosError<{ message?: string }>(error)
       ? error.response?.data?.message ?? 'The channel could not be published.'
@@ -470,7 +469,7 @@ watch(previewDialog, (isOpen) => {
             <div class="text-h6 text-weight-bold">Stream preview</div>
             <div class="text-caption text-grey-5">{{ previewChannel?.name }}</div>
           </div>
-          <q-btn flat round icon="close" aria-label="Close preview" @click="closePreview" />
+          <q-btn flat round icon="close" color="grey-4" class="preview-dialog__close" aria-label="Close preview" @click="closePreview" />
         </q-card-section>
         <q-card-section>
           <video ref="videoRef" controls autoplay muted playsinline class="admin-preview-video" />

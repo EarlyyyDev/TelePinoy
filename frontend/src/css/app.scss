@@ -27,6 +27,11 @@ body {
   color: $text-primary;
 }
 
+.bg-dark-2 {
+  background-color: #0e1b2b !important;
+  color: $text-primary;
+}
+
 .telepinoy-layout {
   min-height: 100vh;
   background:
@@ -360,6 +365,25 @@ body {
 
 .q-field--outlined:hover .q-field__control:before {
   border-color: rgba(115, 165, 255, 0.56);
+}
+
+.admin-login-card {
+  border-color: rgba(166, 192, 224, 0.2);
+  color: $text-primary;
+}
+
+.admin-login-card .text-h4 {
+  color: #f3f7ff;
+}
+
+.preview-dialog__close {
+  border: 1px solid rgba(166, 192, 224, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e7eef8;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.13);
+  }
 }
 
 .q-btn {
